@@ -1,0 +1,85 @@
+#importing turtle to draw and screen to display code
+import turtle
+t = turtle.Turtle()
+s = turtle.Screen()
+
+#letting the user decide what color the dragon is
+color = input("What color would you like the dragon to be?: ")
+
+#using a for loop to draw the 2 wings
+for x in range(2):
+    
+    t.penup()
+    t.setposition(0, 10)
+    t.pendown()
+
+    t.color("black", "black")
+    t.begin_fill()
+
+
+    t.left(90)
+    t.forward(180)
+    t.left(90)
+    t.forward(250)
+    t.end_fill()
+
+#drawing the body of the dragon
+t.color("black", color)
+t.begin_fill()
+t.penup()
+t.setposition(10, 10)
+t.pendown()
+t.left(180)
+t.forward(300)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(200)
+t.right(90)
+t.forward(50)
+t.left(125)
+t.forward(35)
+t.left(55)
+t.forward(30)
+t.right(90)
+t.forward(30)
+t.right(90)
+t.forward(50)
+t.left(125)
+t.forward(35)
+t.left(55)
+t.forward(30)
+t.right(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.left(90)
+t.forward(50)
+t.end_fill()
+
+#drawing the eye
+t.penup()
+t.setposition(40, -15)
+t.pendown()
+t.pendown()
+t.right(70)
+t.color("white")
+t.begin_fill()
+t.circle(20,120)
+t.left(60)
+t.circle(20,120)
+t.end_fill()
+t.left(60)
+t.circle(20,70)
+t.color("blue")
+t.begin_fill()
+t.circle(10)
+t.end_fill()
+t.penup()
+t.circle(20,50)
+t.left(60)
+t.circle(20,120)
+t.pendown()
+
+#closing the screen when the user clicks the X icon
+s.exitonclick()
